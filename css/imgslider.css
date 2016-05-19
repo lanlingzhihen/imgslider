@@ -1,0 +1,83 @@
+.carouselpart{
+    width: 640px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.carousel_imglist { width:640px; height:250px; position:relative; }
+.carousel_imglist a{
+    width:640px;
+    height:250px;
+    display:block;
+    position:absolute;
+    left:0px;
+    top:0;
+    z-index:0;
+}
+.carousel_imglist .carou_itm_img{
+    display:block;
+}
+.carousel_imglist a.current{
+    z-index:100;
+}
+.switch-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 15px;
+    z-index: 200;
+}
+.switch-btn a {
+    float: left;
+    position: relative;
+    display: inline;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    transition: all .3s linear
+}
+.switch-btn a span {
+    visibility: visible;
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    opacity: 1;
+    /*  background: url(http://res.tx3.netease.com/gw/15v1/images/switch_btn_b2cd0fb.png) no-repeat;*/
+    background-image:url("../image/switch_btn_b2cd0fb.png");
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer
+}
+.switch-btn a .ahover {
+    visibility: hidden;
+    background-position: 0 -15px;
+    opacity: 0
+}
+.switch-btn a:hover, .switch-btn a.current {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg)
+}
+.switch-btn a:hover span, .switch-btn a.current span {
+    visibility: hidden;
+    opacity: 0
+}
+.switch-btn a:hover .ahover, .switch-btn a.current .ahover {
+    visibility: visible;
+    opacity: 1
+}
